@@ -7,3 +7,8 @@ Feel free to use the code for whatever you want (or even contribute to it!), alt
 # Is this a GNU/Linux distribution?
 No.
 
+# How do I use this?
+You can compile this kernel by running ```make``` with all the dependencies installed (which I'm too lazy to list), and then run ```make run``` to boot up the ISO using QEMU!
+
+# "I'm gonna main this OS!"
+Are you mental?
