@@ -26,7 +26,7 @@ void scroll() {
 
 // helper function to draw a single character
 // TODO : Remake this to support newlines, we live in a cruel world
-// Had to get some help from
+// Had to get some help from A.I here
 void terminal_draw_char(char character)
 {
 
@@ -41,7 +41,6 @@ void terminal_draw_char(char character)
         return;
     }
 
-    vga_cursor_posX++;
     if (vga_cursor_posX >= 80) {
         vga_cursor_posX = 0;
         vga_cursor_posY++;
@@ -50,6 +49,8 @@ void terminal_draw_char(char character)
     int cursorPos = vga_cursor_posY * 80 + vga_cursor_posX;
 
     video[cursorPos] = (textColor << 8) | character;
+
+    vga_cursor_posX++;
 }
 
 // helper function to draw a string, no printf cuz it's too hard to code
